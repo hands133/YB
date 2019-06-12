@@ -11,13 +11,13 @@ $conn = mysqli_connect($servername, $username, $password);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$res=mysqli_select_db($conn,"test");
+$res=mysqli_select_db($conn,"yb");
 if ($res==0)
 echo "选择数据库出错";
 
 //$ttt='1';
 $ttt="'".$_GET['userId']."'";
-$tt="SELECT * FROM friendship WHERE userId=".$ttt;
+$tt="SELECT * FROM friendship inner join user on friendship.friendId=user.userId where friendship.userId=".$ttt;
 $number=0;
 //$sql = "SELECT content FROM blog where lookNum=43";
 $result1=mysqli_query($conn,$tt);
@@ -31,7 +31,8 @@ echo '<?xml version="1.0" encoding="ISO-8859-1"?><person>';
 while($row=mysqli_fetch_array($result1))
 {
     
-    echo "<friendld>".$row['friendId']."</friendld>";
+    echo "<friendld>".$row['nickname']."</friendld>";
+    echo "<fid>".$row['userId']."</fid>";
    // echo "<time>".$row['time']."</time>";
     //echo "<br>";
     $number++;
