@@ -112,11 +112,8 @@
       display: block;
 }
 
-
-
-
 .subcon_name,.subcon_author,.subcon_price{
-	margin-left:5%;
+    /* margin-left:5%; */
 }
 .subcon_name a,a:link,a:hover {
 	color:black;
@@ -127,22 +124,45 @@
     text-decoration: none;
 }
 .subcon_name{
-	font-size:20px;
+	font-size:18px;
 	font-weight: 1000;
-	weight:100%;
+    weight:100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 10px;
 }
 
 .subcon_price{
 	float:left;
 	weight:100%;
-	color:#F5AF00;
+    color:#F5AF00;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 10px;   
 }
 .subcon_author{
 	font-size:5px;
-	weight:100%;
+    weight:100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 5px;
 }
 .subcon_seller{
-	margin-left:10%;
+	margin-left:5px;
 	float:left;
-	weight:100%;
+    weight:100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.upperInfo
+{
+    padding-top: 5px;
+}
+
+.upperInfo,.lowerInfo
+{
+    padding-left: 0;
+    padding-right: 0;
 }

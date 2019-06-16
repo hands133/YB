@@ -35,7 +35,7 @@
                 </a>
             </div>
             <div class="nav navbar-nav navbar-right loginandreg">
-                <a  id="portrait" style="cursor: pointer">
+                <a id="portrait" style="cursor: pointer">
                     <li>
                         <img src="../main_page/image/un_logged.png">
                     </li>
@@ -44,13 +44,13 @@
             </div>
             <div class="nav navbar-nav navbar-right button_menu">
                 <ul class="nav navbar-nav buttons">
-                    <li class="active"><a href="#">水果蔬菜</a></li>
+                    <!-- <li class="active"><a href="#">水果蔬菜</a></li> -->
                     <li><a href="#">浏览历史</a></li>
                     <li><a href="#">我的购物车</a></li>
                     <li><a href="#">个人主页</a></li>
-                    <li><a href="#">聊天记录</a></li>
+                    <!-- <li><a href="#">聊天记录</a></li> -->
                     <li><a href="#">关注我们</a></li>
-                </ul>
+                </ul>   
             </div>
         </div>
     </nav>
@@ -124,13 +124,16 @@
                             <div class="book_info_basic_left col-md-6">
                                 <ul>
                                     <li>
-                                        <p><span class="info_item">出版社：</span><span id="bookpublishhouse">某某某某出版社</span></p>
+                                        <p><span class="info_item">出版社：</span><span id="bookpublishhouse">某某某某出版社</span>
+                                        </p>
                                     </li>
                                     <li>
-                                        <p ><span class="info_item">ISBN：</span><span id="bookisbn">9001-XXX-XXXX-XX</span></p>
+                                        <p><span class="info_item">ISBN：</span><span
+                                                id="bookisbn">9001-XXX-XXXX-XX</span></p>
                                     </li>
                                     <li>
-                                        <p><span class="info_item">出版日期：</span><span id="bookpublishdate">XXXX-XX-XX</span></p>
+                                        <p><span class="info_item">出版日期：</span><span
+                                                id="bookpublishdate">XXXX-XX-XX</span></p>
                                     </li>
 
                                 </ul>
@@ -357,22 +360,23 @@
     </div>
 </body>
 <script>
-  // 取值时：把获取到的Json字符串转换回对象
-  var prebook = sessionStorage.getItem('testKey');
-  var book = JSON.parse(prebook);
+    // 取值时：把获取到的Json字符串转换回对象
+    var prebook = sessionStorage.getItem('testKey');
+    var book = JSON.parse(prebook);
 
-  
-  sessionStorage.removeItem('testKey')
-  console.log(book); 
-  $("#bookname").html(book.bookName);
-  $("#bookauthor").html(book.author);
-  $("#bookPrice").html(book.price);
-  $("#bookpublishhouse").html(book.publishingHouse);
-  $("#bookpublishdate").html(book.publishingDate);
-  $("#bookisbn").html(book.ISBN);
-  $("#bookcategory").html(book.classification);
-  $("#bookformat").html(book.format);
-  $("#bookpaper").html(book.paper);
+
+    sessionStorage.removeItem('testKey')
+    console.log(book);
+    $("#bookname").html(book.bookName);
+    $("#bookauthor").html(book.author);
+    $("#bookPrice").html(book.price);
+    $("#bookpublishhouse").html(book.publishingHouse);
+    $("#bookpublishdate").html(book.publishingDate);
+    $("#bookisbn").html(book.ISBN);
+    $("#bookcategory").html(book.classification);
+    $("#bookformat").html(book.format);
+    $("#bookpaper").html(book.paper);
 </script>
 <script src="js/main.js"></script>
+
 </html>

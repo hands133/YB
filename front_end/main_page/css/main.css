@@ -255,6 +255,11 @@ body::-webkit-scrollbar-track {/*滚动条里面轨道*/
 	padding-right: 0 !important;
 }
 
+.left_select_panel ul li
+{
+	line-height: 25px;
+}
+
 /* 二手书导航栏 */
 .bookClassHeader {
 	background: url('../image/category_bg.png');
